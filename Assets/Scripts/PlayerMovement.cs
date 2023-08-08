@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float maxSpeed = 50f; // Maximum speed of the car
-    public float acceleration = 10f; // Acceleration rate
-    public float brakeForce = 20f; // Brake force to slow down the car
-    public float turnSpeed = 100f; // Turning speed
+    public float maxSpeed = 15f; // Maximum speed of the car
+    public float acceleration = 4f; // Acceleration rate
+    public float spacebarBrakeForce = 10f; // Brake force when using spacebar to slow down
+    public float turnSpeed = 50f; // Turning speed
 
     private Rigidbody rb;
     private float currentSpeed = 0f;
@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
         // Input handling
         float accelerationInput = Input.GetAxis("Vertical");
         float turnInput = Input.GetAxis("Horizontal");
+        bool spacebarPressed = Input.GetKey(KeyCode.Space);
 
         // Check for acceleration input (W or S keys)
         if (accelerationInput > 0f)
@@ -29,16 +30,12 @@ public class PlayerMovement : MonoBehaviour
             // Accelerate
             currentSpeed = Mathf.Clamp(currentSpeed + acceleration * Time.deltaTime, 0f, maxSpeed);
         }
-        else if (accelerationInput < 0f)
+        else if (accelerationInput < 0f || spacebarPressed) // Brake when pressing S or Spacebar
         {
             // Brake
-            currentSpeed = Mathf.Clamp(currentSpeed - brakeForce * Time.deltaTime, 0f, maxSpeed);
+            currentSpeed = Mathf.Clamp(currentSpeed - spacebarBrakeForce * Time.deltaTime, 0f, maxSpeed);
         }
-        else
-        {
-            // Slow down if no acceleration input
-            currentSpeed = Mathf.Clamp(currentSpeed - brakeForce * Time.deltaTime, 0f, maxSpeed);
-        }
+        
 
         // Calculate the movement vector
         Vector3 movement = transform.forward * currentSpeed * Time.deltaTime;
