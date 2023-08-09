@@ -20,11 +20,15 @@ public class PlayerMovement : MonoBehaviour
     private GameObject loseScreen;
     private GameObject winScreen;
     private GameObject tooEarlyScreen;
+    
+    private GameObject brakingSound;
+    private GameObject crashSound;
+    private GameObject engineSound;
 
     private float distance = 0.0f;
     public TextMeshProUGUI winText;
 
-    public bool playerControEnabled = true;
+    public bool playerControlEnabled = true;
 
 
 
@@ -38,16 +42,25 @@ public class PlayerMovement : MonoBehaviour
         winText.text = $"Das waren noch {distance}m bis zum Crash";
         tooEarlyScreen = GameObject.Find("TooEarlyCanvas");
         tooEarlyScreen.SetActive(false);
+
+        brakingSound = GameObject.Find("Braking");
+        brakingSound.SetActive(false);
+        crashSound = GameObject.Find("Crash");
+        crashSound.SetActive(false);
+        engineSound = GameObject.Find("Engine");
+        engineSound.SetActive(false);
     }
 
     private void FixedUpdate()
     {
-        if(playerControEnabled && !spacebarPressed){
+        if(playerControlEnabled && !spacebarPressed){
             // Input handling
             accelerationInput = Input.GetAxis("Vertical");
             turnInput = Input.GetAxis("Horizontal");
             if(Input.GetKey(KeyCode.Space)){
                 spacebarPressed = true;
+                engineSound.SetActive(false);
+                brakingSound.SetActive(true);
             }
 
         }
@@ -62,6 +75,7 @@ public class PlayerMovement : MonoBehaviour
         {
             // Accelerate
             currentSpeed = Mathf.Clamp(currentSpeed + acceleration * Time.deltaTime, 0f, maxSpeed);
+            engineSound.SetActive(true);
         }
         
 
@@ -89,7 +103,9 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Obstacle"))
         {   
             loseScreen.SetActive(true);
-            playerControEnabled = false;
+            playerControlEnabled = false;
+            engineSound.SetActive(false);
+            crashSound.SetActive(true);
         } 
         
     }
