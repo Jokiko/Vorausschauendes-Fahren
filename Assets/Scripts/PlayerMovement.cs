@@ -129,6 +129,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
+        Debug.Log("Huch");
         triggerReached = true;
         roadBarrel = GameObject.Find("GSDRoadBarrel(Clone)");
     }
