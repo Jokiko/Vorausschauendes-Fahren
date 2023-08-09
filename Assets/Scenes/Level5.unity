@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 15623553}
   m_Layer: 0
   m_Name: GSDWBeam2R
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 28557579}
   m_Layer: 0
   m_Name: GSDWBeam2L
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3620,7 +3620,7 @@ GameObject:
   - component: {fileID: 311228466}
   m_Layer: 0
   m_Name: GSDWBeam2R
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4734,7 +4734,7 @@ GameObject:
   - component: {fileID: 410562603}
   m_Layer: 0
   m_Name: GSDWBeam2L
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13386,7 +13386,7 @@ GameObject:
   - component: {fileID: 1121764837}
   m_Layer: 0
   m_Name: GSDWBeam2L
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13486,7 +13486,7 @@ GameObject:
   - component: {fileID: 1122609825}
   m_Layer: 0
   m_Name: GSDWBeam2L
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13762,7 +13762,7 @@ GameObject:
   - component: {fileID: 1156852120}
   m_Layer: 0
   m_Name: GSDWBeam2R
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15143,7 +15143,7 @@ GameObject:
   - component: {fileID: 1245297852}
   m_Layer: 0
   m_Name: GSDWBeam2R
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16468,7 +16468,7 @@ GameObject:
   - component: {fileID: 1424077342}
   m_Layer: 0
   m_Name: GSDWBeam2L
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18179,7 +18179,7 @@ GameObject:
   - component: {fileID: 1582241075}
   m_Layer: 0
   m_Name: GSDWBeam2R
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21147,7 +21147,7 @@ GameObject:
   - component: {fileID: 1956711170}
   m_Layer: 0
   m_Name: GSDWBeam2R
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21247,7 +21247,7 @@ GameObject:
   - component: {fileID: 1968029267}
   m_Layer: 0
   m_Name: GSDWBeam2L
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
