@@ -19,3 +19,8 @@ Sollte man nach Erschienen eines Hindernisses erfolgreich gebremst haben, wird d
 
 
 ## Erläuterung:
+Für eine authentische User Experience haben wir uns entschieden, unser Bremsspiel aus der Ego Perspektive zu designen, also aus der Windschutzscheibe des Autos heraus, wie man es auch tasächlich gewohnt ist, Auto zu fahren. Diese Erfahrung bietet sich daher an, im Dreidimenstionalen Raum vermittelt zu werden.
+Um diese gewohnte Erfahrung authentischer zu vermitteln, machen wir Gebrauch von Soundeffekten wie Motorengeräuschen, quietschenden Bremsen und dumpfen Stoßen im Falle eines Unfalls. Entsprechend gefährlich ist es, in eine Leitplanke zu fahren oder vollkommen grundlos eine Gefahrenbremsung hinzulegen.
+Dies ist nur von Nöten, wenn tatsächlich ein Hindernis zum Bremsen auf der Straße liegt. Um die Gefahrenbremsung möglichst realistsich zu simulieren, ist im Gegensatz zum konstanten Beschleunigen nur ein einzelner Druck der Leertaste von Nöten, um die plötzliche Dringlichkeit einer solchen Gefahrensituation zu untermauern.
+Gelingt das Bremsmanöver, sieht man den verbleibenden Abstand zum Hindernis, um die Gefahrensituation noch einmal zu verdeutlichen. 
+Die Kamera folgt dabei stets der Rotation des Autos, was nicht unbedingt realistsich, aber deutlich nutzerfreundlicher ist und aus ähnlichen Rennspielen gewohnt ist.  

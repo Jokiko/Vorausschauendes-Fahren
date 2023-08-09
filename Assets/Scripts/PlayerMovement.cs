@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Check for acceleration input (W or S keys)
-        if (accelerationInput < 0f || spacebarPressed || loseScreen.activeSelf) // Brake when pressing S or Spacebar
+        if (spacebarPressed || loseScreen.activeSelf) // Brake when pressing S or Spacebar
         {
             // Brake
             currentSpeed = Mathf.Clamp(currentSpeed - spacebarBrakeForce * Time.deltaTime, 0f, maxSpeed);
