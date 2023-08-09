@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12501,6 +12501,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MSH_Blue_Sedan
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8d4e0759e47da434ba153e80d525a241, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d4e0759e47da434ba153e80d525a241, type: 3}
 --- !u!1 &1675411113 stripped
@@ -12542,6 +12546,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &1675411116
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675411113}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 899318257347024141, guid: 8d4e0759e47da434ba153e80d525a241, type: 3}
 --- !u!1 &1684733565
 GameObject:
   m_ObjectHideFlags: 0
@@ -12597,7 +12615,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6623016119849182847, guid: 1ead216051b0bc04689a02ce945516dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.11
+      value: 8.07
       objectReference: {fileID: 0}
     - target: {fileID: 6623016119849182847, guid: 1ead216051b0bc04689a02ce945516dc, type: 3}
       propertyPath: m_LocalPosition.z
