@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1777,7 +1777,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!43 &250209913
 Mesh:
@@ -7441,7 +7441,7 @@ Transform:
   - {fileID: 531848773}
   - {fileID: 556196716}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1194530578
 Mesh:
@@ -10033,7 +10033,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1568423553
 GameObject:
@@ -10945,8 +10945,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 50
   acceleration: 10
-  brakeForce: 20
+  spacebarBrakeForce: 10
   turnSpeed: 100
+  winText: {fileID: 0}
+  playerControlEnabled: 1
 --- !u!54 &1675411115
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10963,6 +10965,63 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1001 &1694170287
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6623016119849182844, guid: 1ead216051b0bc04689a02ce945516dc, type: 3}
+      propertyPath: m_Name
+      value: Roadblock_Easy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623016119849182847, guid: 1ead216051b0bc04689a02ce945516dc, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623016119849182847, guid: 1ead216051b0bc04689a02ce945516dc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 72.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623016119849182847, guid: 1ead216051b0bc04689a02ce945516dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623016119849182847, guid: 1ead216051b0bc04689a02ce945516dc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 164.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623016119849182847, guid: 1ead216051b0bc04689a02ce945516dc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9992629
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623016119849182847, guid: 1ead216051b0bc04689a02ce945516dc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623016119849182847, guid: 1ead216051b0bc04689a02ce945516dc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.03838783
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623016119849182847, guid: 1ead216051b0bc04689a02ce945516dc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623016119849182847, guid: 1ead216051b0bc04689a02ce945516dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623016119849182847, guid: 1ead216051b0bc04689a02ce945516dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623016119849182847, guid: 1ead216051b0bc04689a02ce945516dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1ead216051b0bc04689a02ce945516dc, type: 3}
 --- !u!43 &1709634295
 Mesh:
   m_ObjectHideFlags: 0
