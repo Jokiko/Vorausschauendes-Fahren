@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     private float currentSpeed = 0f;
 
+
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -49,4 +51,16 @@ public class PlayerMovement : MonoBehaviour
             rb.MoveRotation(rb.rotation * turnRotation);
         }
     }
+
+    private void OnCollisionEnter(Collision collision){
+        
+        Debug.Log("Kollision!");
+        
+    }
+
+        void OnTriggerEnter(Collider collision)
+    {
+        Debug.Log("Trigger!");
+    }
+
 }
