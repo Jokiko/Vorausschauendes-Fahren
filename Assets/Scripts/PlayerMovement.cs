@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     private GameObject crashSound;
     private GameObject engineSound;
 
+    private GameObject roadBarrel;
+
     private float distance = 0.0f;
     public TextMeshProUGUI winText;
 
@@ -50,6 +52,8 @@ public class PlayerMovement : MonoBehaviour
         crashSound.SetActive(false);
         engineSound = GameObject.Find("Engine");
         engineSound.SetActive(false);
+
+        roadBarrel = GameObject.Find("GSDRoadBarrel");
     }
 
     private void FixedUpdate()
@@ -67,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Check for acceleration input (W or S keys)
-        if (accelerationInput < 0f || spacebarPressed) // Brake when pressing S or Spacebar
+        if (accelerationInput < 0f || spacebarPressed || loseScreen.activeSelf) // Brake when pressing S or Spacebar
         {
             // Brake
             currentSpeed = Mathf.Clamp(currentSpeed - spacebarBrakeForce * Time.deltaTime, 0f, maxSpeed);
@@ -95,6 +99,14 @@ public class PlayerMovement : MonoBehaviour
         //check for win condition
         if (currentSpeed <= 0f && spacebarPressed){
             if(triggerReached){
+                if(roadBarrel != null){
+                    Vector3 remainingDistanceVector = roadBarrel.transform.position - transform.position;
+                    distance = Mathf.Round(remainingDistanceVector.magnitude * 100)/ 100;
+                    winText.text = $"Das waren noch {distance}m bis zum Crash";
+                }
+                else{
+                    winText.text = $"Das war knapp!";
+                }
                 winScreen.SetActive(true);
             }
             else{
@@ -105,7 +117,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision){
         
-        Debug.Log("Kollision!");
         if (collision.gameObject.CompareTag("Obstacle"))
         {   
             loseScreen.SetActive(true);
@@ -116,10 +127,10 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-        void OnTriggerEnter(Collider collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("Trigger!");
         triggerReached = true;
+        roadBarrel = GameObject.Find("GSDRoadBarrel(Clone)");
     }
 
 }
