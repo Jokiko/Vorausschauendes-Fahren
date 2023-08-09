@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     public TextMeshProUGUI winText;
 
     public bool playerControlEnabled = true;
+    private bool triggerReached = false;
 
 
 
@@ -93,7 +94,12 @@ public class PlayerMovement : MonoBehaviour
 
         //check for win condition
         if (currentSpeed <= 0f && spacebarPressed){
-            tooEarlyScreen.SetActive(true);
+            if(triggerReached){
+                winScreen.SetActive(true);
+            }
+            else{
+                tooEarlyScreen.SetActive(true);
+            }
         }
     }
 
@@ -113,6 +119,7 @@ public class PlayerMovement : MonoBehaviour
         void OnTriggerEnter(Collider collision)
     {
         Debug.Log("Trigger!");
+        triggerReached = true;
     }
 
 }
